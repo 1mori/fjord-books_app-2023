@@ -1,2 +1,32 @@
 en:
-  hello: "Hello world"
+  activerecord:
+    models:
+      book: 'Books'
+    attributes:
+      book:
+        title: 'Title'
+        memo: 'Memo'
+        author: 'Author'
+        picture: 'Picture'
+  helpers:
+    show: 'Show this book'
+    new: 'New book'
+    edit: 'Edit this book'
+    back: 'Back to books'
+    delete: 'Delete this book'
+  controller:
+    create: 'Book was successfully created.'
+    update: 'Book was successfully updated.'
+    delete: 'Book was successfully deleted.'
+  views:
+    books:
+      edit:
+        title: 'Edit book'
+      index:
+        title: 'Books'
+      new:
+        title: 'New book'
+      show:
+  error:
+    _form:
+      save: 'prohibited this book from being saved.'
