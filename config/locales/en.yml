@@ -21,7 +21,7 @@ en:
   views:
     books:
       edit:
-        title: 'Edit book'
+        title: 'Edit this book'
       index:
         title: 'Books'
       new:
