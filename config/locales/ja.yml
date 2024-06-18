@@ -8,12 +8,13 @@ ja:
         memo: 'メモ'
         author: '著者'
         picture: '画像'
-  helpers:
-    show: '詳細の参照'
-    new: '新規登録'
-    edit: '内容の編集'
-    back: '一覧に戻る'
-    delete: '削除する'
+  view:
+    common:
+      show: '詳細'
+      new: '新規登録'
+      edit: '内容編集'
+      back: '一覧に戻る'
+      delete: '削除する'
   controller:
     create: '書籍の登録が正常に完了しました。'
     update: '書籍の更新が正常に完了しました。'
