@@ -178,6 +178,7 @@ Index
   border-radius: var(--global-br);
   display: flex;
   flex-direction: column;
+  overflow-wrap: break-word;
 }
 
 .index-item div[id] {
