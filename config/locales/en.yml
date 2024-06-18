@@ -19,15 +19,19 @@ en:
     create: 'Book was successfully created.'
     update: 'Book was successfully updated.'
     delete: 'Book was successfully deleted.'
-  views:
-    books:
-      edit:
-        title: 'Edit this book'
-      index:
-        title: 'Books'
-      new:
-        title: 'New book'
-      show:
+  books:
+    book:
+      title: 'Title'
+      memo: 'Memo'
+      author: 'Author'
+      picture: 'Picture'
+    edit:
+      title: 'Edit this book'
+    index:
+      title: 'Books'
+    new:
+      title: 'New book'
+    show:
   error:
-    _form:
+    form:
       save: 'prohibited this book from being saved.'

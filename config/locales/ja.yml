@@ -19,17 +19,19 @@ ja:
     create: '書籍の登録が正常に完了しました。'
     update: '書籍の更新が正常に完了しました。'
     delete: '書籍の削除が正常に完了しました。'
-  views:
-    books:
-      _book:
-      _form:
-      edit:
-        title: '登録内容の編集'
-      index:
-        title: '書籍一覧'
-      new:
-        title: '新規書籍の登録'
-      show:
-  error:
-    _form:
-      save: 'この本の保存を禁止しました。'
+  books:
+    book:
+      title: 'タイトル'
+      memo: 'メモ'
+      author: '著者'
+      picture: '画像'
+    edit:
+      title: '内容の編集'
+    index:
+      title: '書籍一覧'
+    new:
+      title: '新規登録'
+    show:
+error:
+  form:
+    save: '本の保存を中止しました。'
