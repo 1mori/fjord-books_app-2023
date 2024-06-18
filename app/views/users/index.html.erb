@@ -1,10 +1,11 @@
 <h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
 
-<% @users.each do |user| %>
-<%= user.email %>
-<%= user.encrypted_password %>
-<%= user.remember_created_at %>
-<% end %>
+<div id="users" class="index-items">
+  <% @users.each do |user| %>
+    <div class="index-item">
+      <%= render user %>
+    </div>
+    <% end %>
+</div>
 
 <%= paginate @users %>

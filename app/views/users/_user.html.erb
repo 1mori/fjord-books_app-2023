@@ -1,0 +1,11 @@
+<div id="<%= dom_id user %>">
+  <p>
+    <strong>ユーザー名:</strong>
+    <%= user.email %>
+  </p>
+  <p>
+    <%= user.encrypted_password %>
+  </p>
+  <%= user.remember_created_at %>
+</div>
+
