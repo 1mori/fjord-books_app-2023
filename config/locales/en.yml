@@ -8,12 +8,13 @@ en:
         memo: 'Memo'
         author: 'Author'
         picture: 'Picture'
-  helpers:
-    show: 'Show this book'
-    new: 'New book'
-    edit: 'Edit this book'
-    back: 'Back to books'
-    delete: 'Delete this book'
+  view:
+    common:
+      show: 'Show this book'
+      new: 'New book'
+      edit: 'Edit this book'
+      back: 'Back to books'
+      delete: 'Delete this book'
   controller:
     create: 'Book was successfully created.'
     update: 'Book was successfully updated.'
