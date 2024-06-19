@@ -4,34 +4,29 @@ ja:
       book: "書籍"
     attributes:
       book:
-        title: '書籍名'
+        title: 'タイトル'
         memo: 'メモ'
         author: '著者'
         picture: '画像'
   view:
     common:
-      show: '詳細'
-      new: '新規登録'
-      edit: '内容編集'
-      back: '一覧に戻る'
-      delete: '削除する'
+      show: 'この%{name}を表示'
+      new: '%{name}の新規登録'
+      edit: 'この%{name}の内容を編集'
+      back: '%{name}の一覧に戻る'
+      delete: '%{name}を削除する'
   controller:
-    create: '書籍の登録が正常に完了しました。'
-    update: '書籍の更新が正常に完了しました。'
-    delete: '書籍の削除が正常に完了しました。'
+    create: '%{name}の登録が正常に完了しました。'
+    update: '%{name}の更新が正常に完了しました。'
+    delete: '%{name}の削除が正常に完了しました。'
   books:
-    book:
-      title: 'タイトル'
-      memo: 'メモ'
-      author: '著者'
-      picture: '画像'
     edit:
-      title: '内容の編集'
+      title: '%{name}の編集'
     index:
-      title: '書籍一覧'
+      title: '%{name}の一覧'
     new:
-      title: '新規登録'
+      title: '%{name}の新規登録'
     show:
 error:
   form:
-    save: '本の保存を中止しました。'
+    save: '%{name}の保存を中止しました。'

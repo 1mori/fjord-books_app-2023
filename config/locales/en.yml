@@ -1,7 +1,7 @@
 en:
   activerecord:
     models:
-      book: 'Books'
+      book: 'Book'
     attributes:
       book:
         title: 'Title'
@@ -10,28 +10,23 @@ en:
         picture: 'Picture'
   view:
     common:
-      show: 'Show this book'
-      new: 'New book'
-      edit: 'Edit this book'
-      back: 'Back to books'
-      delete: 'Delete this book'
+      show: 'Show this %{name}'
+      new: 'New %{name}'
+      edit: 'Edit this %{name}'
+      back: 'Back to %{name}'
+      delete: 'Delete this %{name}'
   controller:
-    create: 'Book was successfully created.'
-    update: 'Book was successfully updated.'
-    delete: 'Book was successfully deleted.'
+    create: '%{name} was successfully created.'
+    update: '%{name} was successfully updated.'
+    delete: '%{name} was successfully deleted.'
   books:
-    book:
-      title: 'Title'
-      memo: 'Memo'
-      author: 'Author'
-      picture: 'Picture'
     edit:
-      title: 'Edit this book'
+      title: 'Edit this %{name}'
     index:
-      title: 'Books'
+      title: '%{name}'
     new:
-      title: 'New book'
+      title: 'New %{name}'
     show:
   error:
     form:
-      save: 'prohibited this book from being saved.'
+      save: 'prohibited this %{name} from being saved.'
