@@ -25,6 +25,9 @@ ja:
         unconfirmed_email: 未確認Eメール
         unlock_token: ロック解除用トークン
         updated_at: 更新日
+        address: 住所
+        postal_code: 郵便番号
+        bio: 自己紹介文
     models:
       user: ユーザー
   devise:
@@ -97,7 +100,7 @@ ja:
         currently_waiting_confirmation_for_email: "%{email} の確認待ち"
         leave_blank_if_you_don_t_want_to_change_it: 空欄のままなら変更しません
         title: "%{resource}編集"
-        unhappy: 気に入りません
+        unhappy: 削除しますか？
         update: 更新
         we_need_your_current_password_to_confirm_your_changes: 変更を反映するには現在のパスワードを入力してください
       new:
@@ -141,3 +144,8 @@ ja:
       not_saved:
         one: エラーが発生したため %{resource} は保存されませんでした。
         other: "%{count} 件のエラーが発生したため %{resource} は保存されませんでした。"
+  layouts:
+    application:
+      logged_in_as: "%{email} でログインしています。"
+      edit_profile: プロフィールを編集する
+      logout: ログアウト
