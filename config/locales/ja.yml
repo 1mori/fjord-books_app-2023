@@ -1,0 +1,32 @@
+ja:
+  activerecord:
+    models:
+      book: "書籍"
+    attributes:
+      book:
+        title: 'タイトル'
+        memo: 'メモ'
+        author: '著者'
+        picture: '画像'
+  view:
+    common:
+      show: 'この%{name}を表示'
+      new: '%{name}の新規登録'
+      edit: 'この%{name}の内容を編集'
+      back: '%{name}の一覧に戻る'
+      delete: '%{name}を削除する'
+  controller:
+    create: '%{name}の登録が正常に完了しました。'
+    update: '%{name}の更新が正常に完了しました。'
+    delete: '%{name}の削除が正常に完了しました。'
+  books:
+    edit:
+      title: '%{name}の編集'
+    index:
+      title: '%{name}の一覧'
+    new:
+      title: '%{name}の新規登録'
+    show:
+error:
+  form:
+    save: '%{name}の保存を中止しました。'
