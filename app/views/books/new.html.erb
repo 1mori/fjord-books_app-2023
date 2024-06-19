@@ -1,9 +1,9 @@
-<h1><%= t '.title' %></h1>
+<h1><%= t('.title', name: Book.model_name.human) %></h1>
 
 <%= render "form", book: @book %>
 
 <br>
 
 <nav class="page-nav">
-  <%= link_to t('view.common.back'), books_path %>
+  <%= link_to t('view.common.back', name: pluralize_i18n(Book.model_name.human.downcase)), books_path %>
 </nav>
