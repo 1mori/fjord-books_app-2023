@@ -1,11 +1,22 @@
 <div id="<%= dom_id user %>">
   <p>
-    <strong>ユーザー名:</strong>
+    <strong><%= User.human_attribute_name(:email) %>:</strong>
     <%= user.email %>
   </p>
+
   <p>
-    <%= user.encrypted_password %>
+    <strong><%= User.human_attribute_name(:address) %>:</strong>
+    <%= user.address %>
   </p>
-  <%= user.remember_created_at %>
+
+  <p>
+    <strong><%= User.human_attribute_name(:postal_code) %>:</strong>
+    <%= user.postal_code %>
+  </p>
+
+  <p>
+    <strong><%= User.human_attribute_name(:bio) %>:</strong>
+    <%= user.bio %>
+  </p>
 </div>
 
