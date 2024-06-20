@@ -85,5 +85,5 @@ end
 gem 'carrierwave'
 gem 'devise'
 gem 'devise-i18n'
-gem 'kaminari'
 gem 'activestorage-validator'
+gem 'kaminari'
