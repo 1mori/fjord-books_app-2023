@@ -4,5 +4,5 @@ class Comment < ApplicationRecord
   belongs_to :user
   belongs_to :commentable, polymorphic: true
 
-  validate :body, presence: true
+  validates :body, presence: true
 end
