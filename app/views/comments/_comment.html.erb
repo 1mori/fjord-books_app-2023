@@ -1,0 +1,14 @@
+<div class="comments-container">
+  <strong><%= Comment.model_name.human %>:</strong>
+  <% if comments.any? %>
+    <% comments.each do |comment| %>
+      <% if comment.persisted? %>
+        <%= comment.body %>
+        <%= comment.user.email %>
+        <%= l comment.created_at, format: :short %>
+      <% end %>
+    <% end %>
+  <% else %>
+    <p>コメントがありません</p>
+  <% end %>
+</div>
