@@ -1,10 +1,14 @@
 # frozen_string_literal: true
 
 class CommentsController < ApplicationController
-  @comment = @commentable.comments.build(comment_params)
-  @comment.user = current_user
+  before_action :set_commentable
 
-  redirect_to @commentable, notice: t('controllers.common.notice_create', name: Comment.model_name.human) if @comment.save
+  def create
+    @comment = @commentable.comments.build(comment_params)
+    @comment.user = current_user
+
+    redirect_to @commentable, notice: t('controllers.common.notice_create', name: Comment.model_name.human) if @comment.save
+  end
 
   def set_commentable
     if params[:book_id]
