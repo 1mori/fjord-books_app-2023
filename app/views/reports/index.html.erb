@@ -12,3 +12,4 @@
 </div>
 
 <%= link_to t('views.common.new', name: Report.model_name.human.downcase), new_report_path %>
+<%= paginate @reports %>
