@@ -1,14 +1,17 @@
-<div class="comments-container">
-  <strong><%= Comment.model_name.human %>:</strong>
-  <% if comments.any? %>
-    <% comments.each do |comment| %>
-      <% if comment.persisted? %>
-        <%= comment.body %>
-        <%= comment.user.email %>
-        <%= l comment.created_at, format: :short %>
+<h2><%= Comment.model_name.human %></h2>
+
+<% if comments.any? %>
+  <% comments.each do |comment| %>
+    <% if comment.persisted? %>
+      <div id="show-item">
+        <p><%= comment.user.name_or_email %> - <%= l comment.created_at, format: :long %></p>
+        <p><%= comment.body %></p>
+      </div>
+      <% if comment.user_id == current_user.id %>
+        <%= link_to t('views.common.destroy', name: Comment.model_name.human), polymorphic_path([comment.commentable, comment]), method: :delete, data: { confirm: t('views.common.delete_confirm') } %>
       <% end %>
     <% end %>
-  <% else %>
-    <p>コメントがありません</p>
   <% end %>
-</div>
+<% else %>
+  <p><%= t('views.common.no_yet', name: Comment.model_name.human) %></p>
+<% end %>
