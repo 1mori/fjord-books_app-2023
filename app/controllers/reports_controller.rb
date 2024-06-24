@@ -2,7 +2,6 @@
 
 class ReportsController < ApplicationController
   before_action :set_report, only: %i[show edit update destroy]
-  before_action :set_commentable
 
   # GET /reports or /reports.json
   def index
@@ -62,10 +61,6 @@ class ReportsController < ApplicationController
   end
 
   private
-
-  def set_commentable
-    @commentable = Report.find(params[:report_id])
-  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_report

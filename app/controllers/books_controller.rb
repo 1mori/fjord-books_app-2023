@@ -2,7 +2,6 @@
 
 class BooksController < ApplicationController
   before_action :set_book, only: %i[show edit update destroy]
-  before_action :set_commentable
 
   # GET /books or /books.json
   def index
@@ -62,10 +61,6 @@ class BooksController < ApplicationController
   end
 
   private
-
-  def set_commentable
-    @commentable = Book.find(params[:book_id])
-  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_book
