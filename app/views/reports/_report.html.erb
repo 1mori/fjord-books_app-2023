@@ -9,4 +9,12 @@
     <%= report.report_body %>
   </p>
 
+  <p>
+    <strong><%= Report.human_attribute_name(:user) %>:</strong>
+    <%= link_to report.user.name_or_email, report.user %>
+  </p>
+
+  <p>
+    <strong><%= Report.human_attribute_name(:created_at) %>:</strong>
+    <%= l report.created_at, format: :long %>
 </div>

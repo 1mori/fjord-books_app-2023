@@ -21,5 +21,7 @@ ja:
       report:
         report_title: タイトル
         report_body: 本文
+        user: 作成者
+        created_at: 作成日
       comment:
         body: コメントを書く
