@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 class CommentsController < ApplicationController
-  before_action :set_comment, only: %i[destroy]
+  before_action :set_comment, only: %i[edit update destroy]
+
+  def edit; end
 
   def create
     @comment = @commentable.comments.new(comment_params)
@@ -11,6 +13,14 @@ class CommentsController < ApplicationController
       redirect_to @commentable, notice: t('controllers.common.notice_create', name: Comment.model_name.human)
     else
       redirect_to @commentable, alert: 'Failed to create comment.'
+    end
+  end
+
+  def update
+    if @comment.update(comment_params)
+      redirect_to @commentable, notice: t('controllers.common.notice_update', name: Comment.model_name.human)
+    else
+      render :edit
     end
   end
 
