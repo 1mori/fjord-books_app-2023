@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 class CommentsController < ApplicationController
+  before_action :set_comment, only: %i[destroy]
+
   def create
-    @comment = @commentable.comments.build(comment_params)
+    @comment = @commentable.comments.new(comment_params)
     @comment.user = current_user
 
     if @comment.save
@@ -12,8 +14,14 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @comment.destroy
+
+    redirect_to @commentable, notice: t('controllers.common.notice_destroy', name: Comment.model_name.human)
+  end
+
   def set_comment
-    @comment = @commentable.comments.find(params[:id])
+    @comment = Comment.find(params[:id])
   end
 
   def comment_params
