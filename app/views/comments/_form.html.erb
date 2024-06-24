@@ -1,9 +1,9 @@
 <%= form_with model: [commentable, comment] do |form| %>
   <div>
     <%= form.label :body, style: "display: block" %>
-    <%= form.text_field :body, required: true %>
+    <%= form.text_area :body, required: true %>
   </div>
-  
+
   <div>
     <%= form.submit %>
   </div>
