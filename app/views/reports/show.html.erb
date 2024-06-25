@@ -4,6 +4,19 @@
   <%= render @report %>
 </div>
 
+<h3>この日報に言及している日報</h3>
+<% if mentioned_reports = @mentioned_report.presence %>
+  <ul>
+    <% mentioned_reports.each do |mentioning_report| %>
+      <li>
+        <%= link_to mentioning_report.title, report_path(mentioning_report) %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+
+<% end %>
+
 <%= render 'shared/comments', commentable: @report %>
 
 <nav class="page-nav">
