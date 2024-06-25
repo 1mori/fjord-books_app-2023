@@ -7,9 +7,10 @@
   <strong><%= t('.mention') %>:</strong>
   <% if mentioned_reports = @mentioned_report.presence %>
     <ul>
-      <% mentioned_reports.each do |mentioning_report| %>
+      <% mentioned_reports.each do |mentioned_report| %>
         <li>
-          <%= link_to mentioning_report.title, report_path(mentioning_report) %>
+          <%= link_to mentioned_report.title, report_path(mentioned_report) %>
+          <small> (<%= link_to mentioned_report.user.name_or_email, mentioned_report.user %> - <%= l mentioned_report.updated_at, format: :short %>) </small>
         </li>
       <% end %>
     </ul>
