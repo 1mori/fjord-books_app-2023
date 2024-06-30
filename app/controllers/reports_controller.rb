@@ -9,6 +9,7 @@ class ReportsController < ApplicationController
 
   def show
     @report = Report.find(params[:id])
+    @mentioned_report = @report.mentioned_reports.includes(mentioned_reports: :user)
   end
 
   # GET /reports/new
