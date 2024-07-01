@@ -92,6 +92,7 @@ ja:
       equal_to: は%{count}にしてください
       even: は偶数にしてください
       exclusion: は予約されています
+      failed_to_create: %{name}の作成に失敗しました
       greater_than: は%{count}より大きい値にしてください
       greater_than_or_equal_to: は%{count}以上の値にしてください
       in: は%{count}の範囲に含めてください
