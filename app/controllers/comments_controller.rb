@@ -2,6 +2,7 @@
 
 class CommentsController < ApplicationController
   before_action :set_comment, only: %i[edit update destroy]
+  before_action :authorize_user!, only: %i[edit update destroy]
 
   def edit; end
 
@@ -36,5 +37,9 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:body)
+  end
+
+  def authorize_user!
+    redirect_to @commentable, alert: t('errors.messages.not_authorized') if @comment.user_id != current_user.id
   end
 end
