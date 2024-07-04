@@ -10,11 +10,8 @@ class CommentsController < ApplicationController
     @comment = @commentable.comments.new(comment_params)
     @comment.user = current_user
 
-    if @comment.save
-      redirect_to @commentable, notice: t('controllers.common.notice_create', name: Comment.model_name.human)
-    else
-      render @commentable, alert: t('errors.messages.failed_to_create', name: Comment.model_name.human)
-    end
+    @comment.save!
+    redirect_to @commentable, notice: t('controllers.common.notice_create', name: Comment.model_name.human)
   end
 
   def update
