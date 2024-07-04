@@ -102,6 +102,7 @@ ja:
       model_invalid: 'バリデーションに失敗しました: %{errors}'
       not_a_number: は数値で入力してください
       not_an_integer: は整数で入力してください
+      not_authorized: この操作を行う権限がありません
       odd: は奇数にしてください
       other_than: は%{count}以外の値にしてください
       present: は入力しないでください
@@ -196,6 +197,7 @@ ja:
       validation_error: "%{errors}があるため、この%{name}は保存できませんでした"
       title_show: "%{name}の詳細"
       sign_out: ログアウト
+      no_yet: "%{name}はまだありません"
     pagination:
       first: '« 最初'
       last: '最後 »'
@@ -216,3 +218,6 @@ ja:
     registrations:
       edit:
         title: "アカウント編集"
+  comments:
+    form:
+      submit: コメントする
